@@ -1,8 +1,9 @@
 <?php
 use App\Http\Controllers\SinhvienController;
+use App\Http\Controllers\LopController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticateController;
-use App\Models\Sinhvien;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Models\Sinhvien;
 */
 
 Route::resource('/sinhvien', SinhvienController::class);
+// Route::resource('/score', ScoreController::class);
 Route::get('/index', function () {
     if (!auth()->check()) {
         return redirect()->route('login');
@@ -23,6 +25,25 @@ Route::get('/index', function () {
     return view('index');
 })->name('index');
 
+
+
+
+
+Route::resource('/lop', LopController::class);
+// Route::resource('/score', ScoreController::class);
+Route::get('/1', function () {
+    if (!auth()->check()) {
+        return redirect()->route('login');
+    }
+    return view('1');
+})->name('1');
+
+
+
+
+// Route for search
+Route::get('/search', [SinhvienController::class, 'search'])->name('search');
+Route::post('/search', [SinhvienController::class, 'search'])->name('search');
 // Route for login
 Route::get('/login', [AuthenticateController::class, 'login'])->name('login');
 Route::post('/login', [AuthenticateController::class, 'doLogin'])->name('login');
