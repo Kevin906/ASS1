@@ -30,7 +30,6 @@
                             <th>Ngày sinh</th>
                             <th>Giới tính</th>
                             <th>Số ĐT</th>
-                            <th>điểm</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>

@@ -28,6 +28,8 @@ Route::get('/index', function () {
 
 
 
+
+
 // Route for search
 Route::get('/search', [SinhvienController::class, 'search'])->name('search');
 Route::post('/search', [SinhvienController::class, 'search'])->name('search');
