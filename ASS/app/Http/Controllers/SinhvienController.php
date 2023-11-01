@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use index;
 use App\Models\Sinhvien;
 use Illuminate\Http\Request;
 
@@ -70,10 +69,5 @@ class SinhvienController extends Controller
     {
         $sinhvien->delete();
         return redirect()->route('sinhvien.index')->with('thongbao','Xóa thành công');
-    }
-    public function search(Request $request)
-    {
-        $sinhvien = Sinhvien::where('hoten', 'like', '%' . $request->search . '%')->get();
-        return view('index', compact('sinhvien'));
     }
 }

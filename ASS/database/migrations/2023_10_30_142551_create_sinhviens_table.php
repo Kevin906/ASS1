@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('sinhviens', function (Blueprint $table) {
             $table->id();
             $table->string('MaSV');
-            $table->string('Lop');
             $table->string('Diem');
             $table->string('HoTen');
             $table->date('NgaySinh');

@@ -14,18 +14,9 @@ class Sinhvien extends Model
         "NgaySinh",
         "GioiTinh",
         "SoDT",
-        "Lop",
         "Diem",
     ];
-    public function store()
-    {
-        return $this->hasOne(score::class);
-    }
-    // Sinhvien (Student) model
-    public function attributes()
-    {
-        return $this->hasMany(StudentAttribute::class);
-    }
+    
 }
 
 
