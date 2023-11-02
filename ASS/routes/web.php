@@ -14,7 +14,6 @@ use App\Http\Controllers\TeacherController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('/teacher', TeacherController::class);
 
 
 

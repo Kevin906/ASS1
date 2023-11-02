@@ -17,7 +17,7 @@
                 <form action="{{route('sinhvien.store')}}" method="POST">
                     @csrf
                     <div class="row">
-                        <div class="col-md-6">S
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <strong>giáo viên</strong>
                                 <input type="text" class="form-control" placeholder="nhập tên giáo viên">
@@ -48,20 +48,6 @@
                                     <input type="text" name="SoDT" class="from-control" placeholder="Nhập số ĐT">
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="from-group">
-                                            <strong>toán </strong>
-                                            <input type="text" name="toán" class="from-control" placeholder="Nhập điểm">
-                                        </div>
-                                        <div class="from-group">
-                                            <strong>văn</strong>
-                                            <input type="text" name="văn" class="from-control" placeholder="Nhập điểm">
-                                        </div>
-                                        <div class="from-group">
-                                            <strong>tiếng anh</strong>
-                                            <input type="text" name="toán" class="from-control" placeholder="nhập điểm">
-                                        </div> 
-                                    </div>  
                             </div>        
                         </div>
                     </div>

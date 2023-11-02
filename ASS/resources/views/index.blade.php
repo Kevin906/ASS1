@@ -14,6 +14,7 @@
                     </div>    
                 </div>
             </div>
+           
             <div class="card-body">
                 @if (Session::has('thongbao'))
                     <div class="alert alert-success">
@@ -29,10 +30,13 @@
                             <th>Ngày sinh</th>
                             <th>Giới tính</th>
                             <th>Số ĐT</th>
-                            <th>điểm</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>
+                    @php
+                      $i = 1;
+                    @endphp
+
                     <tbody>
                         @foreach ($sinhvien as $sv)
                             <tr>
@@ -56,8 +60,7 @@
                         @endforeach
                     </tbody>
                </table> 
-            </div>
-            {{$sinhvien->links()}}
+            </div> 
         </div>
     </div>
 @endsection
