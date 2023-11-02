@@ -2,7 +2,7 @@
 use App\Http\Controllers\SinhvienController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticateController;
-use App\Models\Sinhvien;
+use App\Http\Controllers\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,9 @@ use App\Models\Sinhvien;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource('/teacher', TeacherController::class);
+
+
 
 Route::resource('/sinhvien', SinhvienController::class);
 Route::get('/index', function () {
